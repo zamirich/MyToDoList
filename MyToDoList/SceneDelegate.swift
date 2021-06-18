@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  MyToDoList
+//  UILessonsApp
 //
-//  Created by Zamir Argashokov on 15.06.2021.
+//  Created by Zamir Argashokov on 25.01.2021.
 //
 
 import UIKit
