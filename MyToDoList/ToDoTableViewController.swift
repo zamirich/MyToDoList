@@ -9,8 +9,13 @@ import UIKit
 
 class ToDoTableViewController: UITableViewController, AddToDoViewControllerDelegate {
 
-    var myList = ["Задача 1", "My task"]
-
+    var myList = [String]()
+    
+    //TO Delete
+    @IBAction func checkingUpdates(_ sender: Any) {
+    print(myList)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -73,15 +78,18 @@ class ToDoTableViewController: UITableViewController, AddToDoViewControllerDeleg
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        //TODO this is the last step for setting up delegate, please see page 172 of coding iphone apps for kids
+        let navigationController = segue.destination as! UINavigationController
+        let addToDoViewController = navigationController.topViewController as! AddToDoViewController
+        addToDoViewController.delegate = self
     }
-    */
+    
     
     // MARK: - Delegate
     

@@ -84,7 +84,7 @@
                     <navigationItem key="navigationItem" title="Reminders" id="BUr-cy-3bQ">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="3Pn-fA-az9">
                             <connections>
-                                <action selector="addTask:" destination="ULc-as-qAD" id="1aC-d9-ZaI"/>
+                                <action selector="checkingUpdates:" destination="ULc-as-qAD" id="3eC-Cz-LDa"/>
                                 <segue destination="F4l-ZM-lmP" kind="show" id="Nii-CY-Vjf"/>
                             </connections>
                         </barButtonItem>

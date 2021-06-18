@@ -14,18 +14,20 @@ protocol AddToDoViewControllerDelegate {
 
 class AddToDoViewController: UIViewController {
 
-    var newTask = "A"
     @IBOutlet weak var textField: UITextField!
     
-    @IBOutlet var tableView: UITableViewController!
+//    @IBOutlet var tableView: UITableViewController!
+    
+    var delegate: AddToDoViewControllerDelegate?
     
     @IBAction func saveButtonTapped(_ sender: Any) {
         self.textField.resignFirstResponder()
-        
+        let newTask = textField.text ?? ""
         if self.textField.text == "" {
             //TODO - right now in case of empty field - save button will do nothing, so need to make it more sophisticated
         } else {
-            print(newTask)
+            delegate?.addToDoViewController(self, didAddToDo: newTask)
+            dismiss(animated: true, completion: nil)
         }
     }
     
@@ -42,6 +44,9 @@ class AddToDoViewController: UIViewController {
         self.present(vc, animated: true, completion: nil)
          
          */
+        
+        
+        
     }
     
     override func viewDidLoad() {
