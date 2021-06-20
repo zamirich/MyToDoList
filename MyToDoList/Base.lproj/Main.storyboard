@@ -49,7 +49,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="textField" destination="1O7-Qk-CqX" id="tIp-kD-L4a"/>
+                        <outlet property="datePicker" destination="nle-V8-FhW" id="AdM-4l-yOy"/>
+                        <outlet property="textField" destination="1O7-Qk-CqX" id="FKV-Da-hcI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
